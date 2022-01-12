@@ -23,8 +23,6 @@ char *cly_append_char(char *str, char c)
             free(tmp);
             return NULL;
         }
-        free(*str);
-        *str = tmp;
     }
     tmp[len] = c;
     tmp[len + 1] = 0;

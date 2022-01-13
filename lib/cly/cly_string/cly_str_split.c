@@ -13,7 +13,7 @@ void append_list(char *string, node_t **list)
 {
     if (string == NULL)
         return;
-    cly_dyn_append_char(&string, 0);
+    cly_dyn_strapnd_chr(&string, 0);
     cly_node_push_back(list, string);
 }
 
@@ -48,7 +48,7 @@ char **cly_str_split(const char *str, char separator)
             string = NULL;
             continue;
         }
-        cly_dyn_append_char(&string, str[i]);
+        cly_dyn_strapnd_chr(&string, str[i]);
     }
     append_list(string, list);
     return to_array(list);

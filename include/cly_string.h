@@ -14,8 +14,8 @@ int cly_putstr(char const *str);
 int cly_revstr(char *str);
 int cly_strcpy(char *dest, char const *src);
 int cly_strncpy(char *dest, char const *src, int n);
-char *cly_append_char(char *str, char c);
-int cly_dyn_append_char(char **str, char c);
+char *cly_strapnd_chr(char *str, char c);
+int cly_dyn_strapnd_chr(char **str, char c);
 int cly_strcmp(char const *s1, char const *s2);
 int cly_strncmp(char const *s1, char const *s2, int n);
 char *cly_strtok(char *str, char *separators);
@@ -27,5 +27,10 @@ int cly_strlwr(char *str);
 char *cly_strstr(char *full_string, const char *sub_string);
 int cly_strset(char *str, char c);
 int cly_strnset(char *str, char c, int n);
+char *cly_strrplc_chr(char *str, char old, char new);
+char *cly_strdup(char const *src);
+char *cly_strapnd_str(char *str, char const *part);
+int cly_dyn_strapnd_str(char **str, char const *part);
+char *cly_strrplc_str(char *str, char const *old, char const *new);
 
 #endif //CLY_CLY_STRING_H

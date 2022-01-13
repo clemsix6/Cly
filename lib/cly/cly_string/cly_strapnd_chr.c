@@ -2,14 +2,13 @@
 ** EPITECH PROJECT, 2022
 ** Cly
 ** File description:
-** cly_append_char.c
+** cly_strapnd_chr.c
 */
 
 #include "cly_string.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-char *cly_append_char(char *str, char c)
+char *cly_strapnd_chr(char *str, char c)
 {
     char *tmp;
     int len = 0;

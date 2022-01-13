@@ -2,19 +2,19 @@
 ** EPITECH PROJECT, 2022
 ** Cly
 ** File description:
-** cly_dyn_append_char.c
+** cly_dyn_strapnd_chr.c
 */
 
 #include "cly_string.h"
 #include <stdlib.h>
 
-int cly_dyn_append_char(char **str, char c)
+int cly_dyn_strapnd_chr(char **str, char c)
 {
     char *tmp;
 
     if (str == NULL)
         return -1;
-    tmp = cly_append_char(*str, c);
+    tmp = cly_strapnd_chr(*str, c);
     if (tmp == NULL)
         return -1;
     if (*str != NULL)

@@ -30,5 +30,9 @@ char *cly_strdup(char const *src);
 char *cly_strapnd_str(char *str, char const *part);
 int cly_dyn_strapnd_str(char **str, char const *part);
 char *cly_strrplc_str(char *str, char const *old, char const *new);
+char *cly_strnapnd_str(char *str, char const *part, int n);
+int cly_dyn_strnapnd_str(char **str, char const *part, int n);
+char *cly_strrmv(char *str, int index, int count);
+char *cly_strndup(char const *src, int n);
 
 #endif //CLY_CLY_STRING_H

@@ -13,6 +13,9 @@ file(GLOB ClyLinkedList
 file(GLOB ClyIo
         "lib/cly/cly_io/*.c"
         )
+file(GLOB ClyLib
+        "lib/cly/cly_lib/*.c"
+        )
 file(GLOB ClyH
         "include/*.h"
         )
@@ -20,4 +23,4 @@ file(GLOB ClyH
 set(CMAKE_C_STANDARD 99)
 
 include_directories("include")
-add_executable(Cly ${Src} ${ClyString} ${ClyLinkedList} ${ClyIo} ${ClyH})
+add_executable(Cly ${Src} ${ClyString} ${ClyLinkedList} ${ClyIo} ${ClyLib} ${ClyH})

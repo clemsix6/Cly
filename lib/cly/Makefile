@@ -1,4 +1,4 @@
-SRC = $(wildcard cly_string/*.c cly_linked_list/*.c)
+SRC = $(wildcard cly_string/*.c cly_linked_list/*.c cly_io/*.c)
 OBJ = $(SRC:.c=.o)
 
 CFLAGS = -W -Wall -Werror -Wextra -I../../include

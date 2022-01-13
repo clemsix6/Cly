@@ -5,21 +5,14 @@
 ** main.c
 */
 
-#include "cly_string.h"
-#include "cly_linked_list.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "cly_io.h"
 
 int main(void)
 {
-    char str[] = "Hello World :)";
-    char **result;
+    char str[] = "Hello World :)\n";
+    char *line = cly_readline(0);
 
-    result = cly_str_split(str, ' ');
-    printf("--------\n");
-    for (int i = 0; result[i] != NULL; i++) {
-        printf("%s\n", result[i]);
-        free(result[i]);
-    }
-    free(result);
+    cly_putstr(str);
+    cly_putstr(line);
+    cly_putchar('\n');
 }

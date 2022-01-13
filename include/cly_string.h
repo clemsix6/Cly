@@ -9,8 +9,6 @@
 #define CLY_CLY_STRING_H
 
 int cly_strlen(char const *str);
-int cly_putchar(char c);
-int cly_putstr(char const *str);
 int cly_revstr(char *str);
 int cly_strcpy(char *dest, char const *src);
 int cly_strncpy(char *dest, char const *src, int n);

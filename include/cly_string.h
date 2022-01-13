@@ -22,5 +22,10 @@ char *cly_strtok(char *str, char *separators);
 char **cly_str_split(const char *str, char separator);
 int cly_strcat(char *dest, char const *src);
 char *cly_dyn_strcat(char const *str1, char  const *str2);
+int cly_strupr(char *str);
+int cly_strlwr(char *str);
+char *cly_strstr(char *full_string, const char *sub_string);
+int cly_strset(char *str, char c);
+int cly_strnset(char *str, char c, int n);
 
 #endif //CLY_CLY_STRING_H

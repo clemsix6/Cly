@@ -14,7 +14,7 @@ int cly_revstr(char *str)
 
     if (len == -1)
         return -1;
-    cly_strcpy(str, tmp);
+    cly_strcpy(tmp, str);
     for (int i = 0; i < len; i++)
         str[i] = tmp[len - i - 1];
     return 0;

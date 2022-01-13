@@ -25,3 +25,23 @@ Test(cly_str_split, test_cly_str_split_1)
     free(result[2]);
     free(result);
 }
+
+Test(cly_str_split, test_cly_str_split_2)
+{
+    char str[] = "Hello";
+    char **result;
+
+    result = cly_str_split(str, ' ');
+    cr_assert_str_eq(result[0], "Hello");
+    free(result[0]);
+    free(result);
+}
+
+Test(cly_str_split, test_cly_str_split_3)
+{
+    char *str = NULL;
+    char **result;
+
+    result = cly_str_split(str, ' ');
+    cr_assert_eq(result, NULL);
+}

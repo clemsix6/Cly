@@ -10,9 +10,12 @@
 
 int cly_node_destroy(node_t **node)
 {
-    node_t *loop_node = (*node);
+    node_t *loop_node;
     node_t *tmp_node;
 
+    if (node == NULL)
+        return -1;
+    loop_node = (*node);
     if (loop_node == NULL)
         return -1;
     while (loop_node->next != NULL) {

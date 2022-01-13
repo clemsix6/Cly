@@ -7,7 +7,7 @@
 
 #include <unistd.h>
 
-int cly_putchar(char const c)
+int cly_putchar(char c)
 {
     return (int)(write(1, &c, 1));
 }

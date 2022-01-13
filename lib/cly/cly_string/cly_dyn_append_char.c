@@ -2,13 +2,13 @@
 ** EPITECH PROJECT, 2022
 ** Cly
 ** File description:
-** cly_append_dynamic_char.c
+** cly_dyn_append_char.c
 */
 
 #include "cly_string.h"
 #include <stdlib.h>
 
-int cly_append_dynamic_char(char **str, char c)
+int cly_dyn_append_char(char **str, char c)
 {
     char *tmp;
 

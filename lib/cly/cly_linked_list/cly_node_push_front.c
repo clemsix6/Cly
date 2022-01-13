@@ -8,11 +8,15 @@
 #include <stdlib.h>
 #include "cly_linked_list.h"
 
-void cly_node_push_front(node_t **node, void * value)
+int cly_node_push_front(node_t **node, void * value)
 {
-    node_t *new_node = malloc(sizeof(node_t));
+    node_t *new_node;
 
+    if (node == NULL)
+        return -1;
+    new_node = malloc(sizeof(node_t));
     new_node->value = value;
     new_node->next = (*node);
     *node = new_node;
+    return 0;
 }

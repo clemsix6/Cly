@@ -10,6 +10,7 @@ TARGET = test
 test : lib_make
 	gcc -o $(TARGET) $(TEST_SRC) $(CFLAGS) $(LDFLAGS) $(CRFLAGS)
 	./$(TARGET)
+	gcovr
 
 run : lib_make
 	gcc -o $(TARGET) $(APP_SRC) $(CFLAGS) $(LDFLAGS)

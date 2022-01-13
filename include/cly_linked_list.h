@@ -18,9 +18,9 @@ struct node_s {
     node_t *next;
 };
 
-void cly_node_push_back(node_t **node, void *value);
+int cly_node_push_back(node_t **node, void *value);
 node_t *cly_node_pop_back(node_t **node);
-void cly_node_push_front(node_t **node, void *value);
+int cly_node_push_front(node_t **node, void * value);
 node_t *cly_node_pop_front(node_t **node);
 int cly_node_count(node_t **node);
 int cly_node_destroy(node_t **node);

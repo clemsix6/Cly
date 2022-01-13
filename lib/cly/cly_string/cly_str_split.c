@@ -13,7 +13,7 @@ void append_list(char *string, node_t **list)
 {
     if (string == NULL)
         return;
-    cly_append_dynamic_char(&string, 0);
+    cly_dyn_append_char(&string, 0);
     cly_node_push_back(list, string);
 }
 
@@ -40,13 +40,15 @@ char **cly_str_split(const char *str, char separator)
     node_t **list = &null_node;
     char *string = NULL;
 
+    if (str == NULL)
+        return NULL;
     for (int i = 0; str[i] != 0; i++) {
         if (str[i] == separator) {
             append_list(string, list);
             string = NULL;
             continue;
         }
-        cly_append_dynamic_char(&string, str[i]);
+        cly_dyn_append_char(&string, str[i]);
     }
     append_list(string, list);
     return to_array(list);

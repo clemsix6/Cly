@@ -19,7 +19,7 @@ char *cly_append_char(char *str, char c)
     } else {
         len = cly_strlen(str);
         tmp = malloc(len + 1);
-        if (cly_strncpy(str, tmp, len) == -1) {
+        if (cly_strncpy(tmp, str, len) == -1) {
             free(tmp);
             return NULL;
         }

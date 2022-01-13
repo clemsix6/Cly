@@ -30,3 +30,14 @@ Test(cly_node_push_front, test_cly_node_push_front_1)
 
     cly_node_destroy(list);
 }
+
+Test(cly_node_push_front, test_cly_node_push_front_2)
+{
+    node_t **list = NULL;
+    char str1[] = "One";
+    int ret_code;
+
+    ret_code = cly_node_push_front(list, str1);
+    cr_assert_eq(ret_code, -1);
+    cly_node_destroy(list);
+}

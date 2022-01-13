@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 
-int cly_strncpy(char const *src, char *dest, int n)
+int cly_strncpy(char *dest, char const *src, int n)
 {
     if (src == NULL || dest == NULL)
         return -1;

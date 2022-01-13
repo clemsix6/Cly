@@ -10,9 +10,13 @@
 
 node_t *cly_node_pop_back(node_t **node)
 {
-    node_t *loop_node = (*node);
-    node_t *last_node = (*node);
+    node_t *loop_node;
+    node_t *last_node;
 
+    if (node == NULL)
+        return NULL;
+    loop_node = (*node);
+    last_node = (*node);
     if (loop_node == NULL)
         return NULL;
     if (loop_node->next == NULL) {

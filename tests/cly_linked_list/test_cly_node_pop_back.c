@@ -35,3 +35,31 @@ Test(cly_node_pop_back, test_cly_node_pop_back_1)
     cly_node_destroy(list);
     free(popped);
 }
+
+Test(cly_node_pop_back, test_cly_node_pop_back_2)
+{
+    node_t *null_node = NULL;
+    node_t **list = &null_node;
+    node_t *popped;
+    char str1[] = "Four";
+
+    cly_node_push_front(list, str1);
+
+    popped = cly_node_pop_back(list);
+
+    cr_assert_str_eq(popped->value, str1);
+    cr_assert_eq((*list), NULL);
+
+    cly_node_destroy(list);
+    free(popped);
+}
+
+Test(cly_node_pop_back, test_cly_node_pop_back_3)
+{
+    node_t **list = NULL;
+    node_t *popped;
+
+    popped = cly_node_pop_back(list);
+    cr_assert_eq(popped, NULL);
+    cly_node_destroy(list);
+}
